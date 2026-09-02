@@ -629,7 +629,7 @@ function submitForm() {
 
   fetch(BACKEND_URL, {
     method:  "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "text/plain" },
     body:    JSON.stringify({
       action: "check-student",
       name:   name,
