@@ -627,9 +627,9 @@ function submitForm() {
   showLoading(true);
   trackEvent("form_submitted", { source: state.book ? "BOOK_QR" : "DIRECT" });
 
-  fetch(BACKEND_URL, {
+  fetch(BACKEND_URL + "?action=check-student", {
     method:  "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "text/plain;charset=UTF-8" },
     body:    JSON.stringify({
       action: "check-student",
       name:   name,
